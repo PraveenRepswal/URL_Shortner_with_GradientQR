@@ -2,7 +2,7 @@ import tkinter as tk
 from tkinter import messagebox
 import pyshorteners
 import qrcode
-from PIL import Image, ImageTk, ImageDraw, ImageOps
+from PIL import Image, ImageTk, ImageOps
 import random
 
 colors = ['red','blue','orange','purple','pink','brown','cyan','magenta','gold','lime','chocolate','navy','violet','lavender','turquoise']
@@ -56,7 +56,7 @@ def shorten_url():
             # Convert the QR code image into PhotoImage
             photo = ImageTk.PhotoImage(image=finl_img)
 
-            # Display the QR code
+            # Display QR code
             qr_image_label.config(image=photo)
             qr_image_label.photo = photo 
         except Exception as e:
@@ -76,7 +76,7 @@ url_entry.pack()
 shorten_button = tk.Button(app, text="Shorten URL", command=shorten_url)
 shorten_button.pack()
 
-# Label to display the shortened URL
+# Display shortened URL
 shortened_url_text = tk.Label(app, text="")
 shortened_url_text.pack()
 
